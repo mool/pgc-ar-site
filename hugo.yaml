@@ -1,0 +1,119 @@
+---
+baseURL: "https://pgc.ar"
+languageCode: "en-us"
+title: "PGC"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+# services:
+#   googleAnalytics:
+#     id: G-MEASUREMENT_ID
+#   disqus:
+#     shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main: []
+
+params:
+  title: "pgc.ar"
+  description: My personal website
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    defaultTheme: "dark"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "pgc.ar" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Pablo."
+    subtitle: "I'm a Platform Engineer"
+    content: |
+      specialized in building resilient, self-service infrastructure and
+      high-availability systems. Skilled in Kubernetes, IaC (Terraform, Helm,
+      Crossplane), cloud platforms, and GitOps workflows. Passionate about
+      automation, reducing operational burden, and empowering development teams
+      through robust tooling and clear service ownership practices.
+    image: /images/me.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: false
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/mool
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/pablogutierrezdelcastillo/
+
+  # About
+  about:
+    enable: false
+
+  # Experience
+  experience:
+    enable: false
+
+  # projects
+  projects:
+    enable: false
+
+  footer:
+    recentPosts:
+      enable: false
+    # socialNetworks:
+    #   github: https://github.com
+    #   linkedin: https://linkedin.com
